@@ -1,7 +1,7 @@
-package com.lh.software.chorehive.api.config;
+package com.lh.software.chorehive.api.web.config;
 
-import com.lh.software.chorehive.api.domain.Note;
-import com.lh.software.chorehive.api.service.NoteService;
+import com.lh.software.chorehive.api.core.domain.Note;
+import com.lh.software.chorehive.api.core.service.NoteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

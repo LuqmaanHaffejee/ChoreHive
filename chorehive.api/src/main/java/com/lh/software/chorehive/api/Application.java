@@ -1,6 +1,6 @@
 package com.lh.software.chorehive.api;
 
-import com.lh.software.chorehive.api.config.DummyDataPopulator;
+import com.lh.software.chorehive.api.web.config.DummyDataPopulator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.SpringApplication;

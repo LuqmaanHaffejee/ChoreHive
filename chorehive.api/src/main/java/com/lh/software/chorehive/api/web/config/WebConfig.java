@@ -1,4 +1,4 @@
-package com.lh.software.chorehive.api.config;
+package com.lh.software.chorehive.api.web.config;
 
 import lombok.AllArgsConstructor;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

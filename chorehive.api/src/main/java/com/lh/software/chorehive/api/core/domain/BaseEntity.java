@@ -1,4 +1,4 @@
-package com.lh.software.chorehive.api.domain;
+package com.lh.software.chorehive.api.core.domain;
 
 import lombok.Getter;
 import lombok.Setter;
