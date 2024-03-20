@@ -3,12 +3,15 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MessageModule } from "primeng/message";
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     importProvidersFrom(
-      HttpClientModule
+      HttpClientModule,
+      BrowserAnimationsModule,
     )
   ]
 };

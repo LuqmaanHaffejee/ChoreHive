@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Note extends BaseEntity {
+public class Task extends BaseEntity {
   
   private String summary;
   

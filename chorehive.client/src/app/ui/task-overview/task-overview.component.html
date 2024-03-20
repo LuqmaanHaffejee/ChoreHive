@@ -1,1 +1,15 @@
-<p>task-overview works!</p>
+<p-card class="p-card">
+  <div class="p-card-title">
+    <div class="w-full flex justify-content-between flex-wrap">
+      <div>
+        <span class="text-xl text-primary font-bold">My Tasks</span>
+      </div>
+      <div>
+        <p-button label="Task" icon="pi pi-plus" (click)="onAddTask()"></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="p-card-body">
+    <app-task-list></app-task-list>
+  </div>
+</p-card>

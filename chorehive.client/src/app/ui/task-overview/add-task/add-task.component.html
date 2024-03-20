@@ -1,0 +1,16 @@
+<div class="" [formGroup]="addTaskForm">
+  <div class="field">
+    <label for="summary" [innerText]="'Summary'"></label>
+    <input id="summary" class="w-full" pInputText formControlName="summary">
+  </div>
+
+  <div class="field">
+    <label for="description" [innerText]="'Description'"></label>
+    <textarea id="description" class="w-full" pInputTextarea rows="5" formControlName="description"></textarea>
+  </div>
+
+  <div class="text-right">
+    <p-button label="Add" [disabled]="addTaskForm.invalid" (click)="onSubmit()"></p-button>
+  </div>
+
+</div>
