@@ -30,6 +30,10 @@ export class TaskService {
   }
 
   addNewTask(newTask: { summary: string, description: string }) {
-    return this.http.post<HttpStatusCode>(ApiPaths.BASE_TASK_URL, newTask).pipe(tap(() => this.updateTaskList()));
+    return this.http.post<HttpStatusCode>(ApiPaths.BASE_TASK_URL, newTask).pipe(tap(() => this.updateTaskList())).subscribe();
+  }
+
+  toggleCompletionStatus(taskId: number) {
+    this.http.post(`${ApiPaths.BASE_TASK_URL}/${taskId}/toggle-completion`, {}).pipe(tap(() => this.updateTaskList())).subscribe();
   }
 }

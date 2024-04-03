@@ -21,7 +21,12 @@ public class TaskController {
   
   @PostMapping
   public void addNewTask(@RequestBody Task task) {
-    this.taskService.saveTask(task);
+    this.taskService.addNewTask(task);
+  }
+  
+  @PostMapping("/{id}/toggle-completion")
+  public void markTaskAsDone(@PathVariable Long id) {
+    this.taskService.toggleCompletion(id);
   }
   
   @GetMapping("/{id}")
