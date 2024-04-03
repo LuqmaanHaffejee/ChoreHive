@@ -36,6 +36,6 @@ export class AddTaskComponent {
   });
 
   onSubmit() {
-    this.taskService.addNewTask(this.addTaskForm.getRawValue()).subscribe();
+    this.taskService.addNewTask(this.addTaskForm.getRawValue());
   }
 }

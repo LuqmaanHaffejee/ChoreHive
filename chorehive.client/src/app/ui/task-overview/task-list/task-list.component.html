@@ -1,11 +1,17 @@
-<p-accordion [activeIndex]="0">
-  <p-accordionTab *ngFor="let task of tasks$ | async">
+<p-accordion [activeIndex]="activeTaskIndex$ | async">
+  <p-accordionTab *ngFor="let task of tasks$ | async; let i = index" (click)="onTabSelected(i)">
     <ng-template pTemplate="header">
-      <div class="w-full flex justify-content-between flex-wrap">
-        <div class="font-bold" [innerText]="task.summary"></div>
+      <div class="w-full flex justify-content-between flex-wrap"  [ngClass]="{'text-200' : task.complete}">
+        <div class="font-bold" [innerText]="task.summary" [ngStyle]="{textDecoration: task.complete ? 'line-through' : ''}"></div>
         <div class="font-light" [innerText]="'Created on ' + task.dateCreated"></div>
       </div>
     </ng-template>
-    <p [innerText]="task.description"></p>
+    <p [innerText]="task.description" [ngStyle]="{textDecoration: task.complete ? 'line-through' : ''}"></p>
+    <p-button
+      [severity]="task.complete ? 'secondary' : 'success'"
+      [icon]="task.complete ? 'pi pi-pencil' : 'pi pi-check'"
+      [label]="task.complete ? 'Incomplete' : 'Complete'"
+      (click)="onToggleCompletionStatus(task.id)">
+    </p-button>
   </p-accordionTab>
 </p-accordion>

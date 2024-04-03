@@ -8,8 +8,12 @@ public interface TaskService {
   
   Task saveTask(Task task);
   
+  void toggleCompletion(Long taskId);
+  
   List<Task> findAll();
   
   Task findById(Long id);
+  
+  Task addNewTask(Task task);
   
 }

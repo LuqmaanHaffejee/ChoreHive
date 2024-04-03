@@ -19,14 +19,12 @@ public class DummyDataPopulator {
     Task task = new Task();
     task.setSummary("Respond to email");
     task.setDescription("Respond to Jack about using UIPath to develop angular webapps");
-    task.setComplete(false);
-    this.taskService.saveTask(task);
+    this.taskService.addNewTask(task);
     
     task = new Task();
     task.setSummary("Setup client meeting");
     task.setDescription("Setup meeting with ABC client to discuss plans for the demo");
-    task.setComplete(false);
-    this.taskService.saveTask(task);
+    this.taskService.addNewTask(task);
   }
   
 }
